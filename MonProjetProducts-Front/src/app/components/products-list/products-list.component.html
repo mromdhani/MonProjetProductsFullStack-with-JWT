@@ -1,0 +1,34 @@
+
+<div class="card">
+  <div class="card-header bg-info text-white">
+   <h5> Liste des produits </h5>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Code du produit</th>
+          <th>Nom du produit</th>
+          <th>Prix Unitaire</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td >{{item.id}}</td>
+          <td >  <a [routerLink]="['/detail', item.id]"
+                    routerLinkActive="router-link-active">
+                    {{item.nom}}
+                  </a></td>
+           <td >{{item.prixUnitaire}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+
+
+
